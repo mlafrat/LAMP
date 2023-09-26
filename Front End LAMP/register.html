@@ -1,36 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>POOSD LSP08 Register</title>
-    <script type="text/javascript" src="js/code.js"></script>
-    <link rel="stylesheet" href="/css/login.css" />
-    <link rel="stylesheet" href="globals.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Ubuntu"
-    />
-  </head>
-  <body>
-    <div class="containerWrapper">
-      <div class="container">
-        <div class="backBox"></div>
-        <div class="frontBox"></div>
-        <div class="registerTitle">Sign Up</div>
-        <div class="signUpBelow">New User? Sign up below!</div>
-        <div class="boxOne"></div>
-        <div class="firstName">First Name</div>
-        <div class="boxTwo"></div>
-        <div class="lastName">Last Name</div>
-        <div class="boxThree"></div>
-        <div class="regUsername">Username</div>
-        <div class="boxFour"></div>
-        <div class="regPassword">Password</div>
-        <div class="retUserText">Existing user? Sign in below!</div>
-        <div class="signInButton"></div>
-        <div class="signInText">Sign In</div>
-      </div>
-    </div>
-  </body>
+<html>
+<header>
+    <title>Register</title>
+</header>
+<body>
+    <h1>Register</h1>
+    <p>New User? Sign Up Below!</p>
+    <form action="placeholder.php" method="POST">
+        <input type="text" id="firstName" placeholder="First" required>
+        <br>
+        <input type="text" id="lastName" placeholder="Last" required>
+        <br>
+        <input type="text" id="userName" placeholder="Username" required>
+        <br>
+        <input type="password" id="password" placeholder="Password" required>
+        <br>
+        <input type="password" id="passwordRe" placeholder="Re-type Password" required>
+        <br>
+        <input type="submit" value="Register">
+    </form>
+    <p>Existing User? Sign in to your account</p>
+    <a href="login.html">
+        <button>Login</button>
+    </a>
+</body>
 </html>
