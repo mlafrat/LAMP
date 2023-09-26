@@ -1,5 +1,5 @@
 # LAMP
 
-Updated front end files: login & register (use these)
+Updated front end files: login, register, & create (use these)
 
-# UNUPDATED: HOME, UPDATE, CREATE (DO NOT USE THESE YET)
+# UNUPDATED: HOME, UPDATE, CONTACTS (DO NOT USE THESE YET)
