@@ -53,7 +53,7 @@ session_start();
         <input type="submit" class="loginButton" value="Login" />
       </form>
       <div class="newUserText">New User? Register below!</div>
-      <a href="register.html">
+      <a href="register.php">
         <button class="registerButton">Register</button>
       </a>
     </div>
