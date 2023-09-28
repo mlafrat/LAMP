@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Update Contact</title>
+    <title>Register</title>
     <script type="text/javascript" src="js/code.js"></script>
     <link rel="stylesheet" href="/css/login.css" />
     <link rel="stylesheet" href="globals.css" />
@@ -17,30 +17,27 @@
       <div class="container">
         <div class="backBox"></div>
         <div class="frontBox"></div>
-        <div class="createTitle">Update Contact</div>
-        <div class="signUpBelow">Please fill all boxes below.</div>
+        <div class="registerTitle">Sign Up</div>
+        <div class="signUpBelow">New User? Sign up below!</div>
         <form action="placeholder.php" method="POST">
           <input type="text" class="boxOne" placeholder="First Name" required />
           <br />
           <input type="text" class="boxTwo" placeholder="Last Name" required />
           <br />
-          <input type="text" class="boxThree" placeholder="Email" required />
+          <input type="text" class="boxThree" placeholder="Username" required />
           <br />
           <input
-            type="tel"
+            type="password"
             class="boxFour"
-            placeholder="Phone: 123-456-7890"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="Password"
             required
           />
           <br />
-          <input type="submit" class="signUpButton" value="Update!" />
-          <a href="contacts.htm">
-            <button class="retToMain">Click here to go back to Contacts</button>
-            </a>
-          <div class="retUserText">Click below to delete contact.</div>
-        <a href="login.html">
-          <button class="deleteButton">Delete</button>
+          <input type="submit" class="signUpButton" value="Register" />
+        </form>
+        <div class="retUserText">Existing user? Sign in below!</div>
+        <a href="index.php">
+          <button class="signInButton">Login</button>
         </a>
       </div>
     </div>
