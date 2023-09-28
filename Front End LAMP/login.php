@@ -45,7 +45,7 @@ session_start();
       <div class="frontBox"></div>
       <div class="loginTxt">Sign In</div>
       <p class="existUserText">Existing user? Sign into your account!</p>
-      <form action="login.php" method="POST">
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
         <input type="text" class="boxOne" placeholder="Username" required />
         <br />
         <input type="password" class="boxTwo" placeholder="Password" required />
