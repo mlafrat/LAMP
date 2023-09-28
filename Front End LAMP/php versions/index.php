@@ -1,61 +1,31 @@
-<?php
-session_start();
-	require_once('includes/functions.inc.php');
-	debug_to_console("Test");
-	if ($_SERVER["REQUEST_METHOD"] == "POST") 
-	{
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-		$conn = connectToDatabase();
-		debug_to_console("User auth start");
-		$user = authenticate_user($username, $password);
-		debug_to_console("User auth end");
-		
-		if ($user) 
-		{
-			// Store user data in the session for later use
-			$_SESSION['user_id'] = $user['id'];
-			$_SESSION['username'] = $user['userName'];
-			// Redirect to a logged-in user page
-			header("Location: dashboard.php");
-			exit();
-		} else 
-		{
-			debug_to_console("Else happened");
-			$error_message = "Invalid username or password";
-		}
-	}
-?>
-
 <!DOCTYPE html>
-<head>
-  <title>POOSD LSP08 Login</title>
-  <script type="text/javascript" src="js/code.js"></script>
-  <link rel="stylesheet" href="/css/login.css" />
-  <link rel="stylesheet" href="globals.css" />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Ubuntu"
-  />
-</head>
-<body>
-  <div class="containerWrapper">
-    <div class="container">
-      <div class="backBox"></div>
-      <div class="frontBox"></div>
-      <div class="loginTxt">Sign In</div>
-      <p class="existUserText">Existing user? Sign into your account!</p>
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-        <input type="text" class="boxOne" placeholder="Username" required />
-        <br />
-        <input type="password" class="boxTwo" placeholder="Password" required />
-        <br />
-        <input type="submit" class="loginButton" value="Login" />
-      </form>
-      <div class="newUserText">New User? Register below!</div>
-      <a href="register.php">
-        <button class="registerButton">Register</button>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <script type="text/javascript" src="js/code.js"></script>
+    <link rel="stylesheet" href="/css/mainPage.css" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="/css/login.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+    />
+  </head>
+  <body>
+    <div class="homeTitle">Welcome to Shades of Blue Contact Manager.</div>
+    <div class="loginContainer">
+      <div class="loginBack"></div>
+      <a href="login.php">
+        <button class="loginButton">Existing Users</button>
       </a>
     </div>
-  </div>
-</body>
+    <div class="regContainer">
+      <div class="regBack"></div>
+      <a href="register.php">
+        <button class="regButton">New Users</button>
+      </a>
+    </div>
+  </body>
+</html>
