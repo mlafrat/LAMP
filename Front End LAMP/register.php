@@ -36,7 +36,7 @@ session_start();
         <div class="frontBox"></div>
         <div class="registerTitle">Sign Up</div>
         <div class="signUpBelow">New User? Sign up below!</div>
-        <form method="POST">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
           <input type="text" class="boxOne" placeholder="First Name" id="firstName"required />
           <br />
           <input type="text" class="boxTwo" placeholder="Last Name" id="lastName"required />
