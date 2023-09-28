@@ -9,7 +9,7 @@ session_start();
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		$query = "insert into users (firstName,lastName,username,password) values ('$firstName','$lastName','$username','$password')";
-			
+		$conn = connectToDatabase();
     mysqli_query($con, $query);
 		header("Location: login.php");
 		die;
