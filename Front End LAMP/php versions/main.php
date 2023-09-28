@@ -35,9 +35,9 @@ if (!isset($_SESSION['user_id']))
       </a>
     </div>
     <div class="containerSignOut">
-      <a href="home.php">
-        <button class="signOutBox">Sign Out</button>
-      </a>
+      <form method="post" class=signOutBox action="includes/logout.inc.php">
+        <input type="submit" value="Logout">
+    </form>
     </div>
     <div class="containerSearch">
       <div class="searchTxt">Search Contacts</div>
