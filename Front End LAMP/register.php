@@ -8,7 +8,7 @@ session_start();
     $lastName = $_POST['lastName'];
 		$username = $_POST['username'];
 		$password = $_POST['password'];
-		$query = "insert into users (firstName,lastName,username,password) values ('$firstName','$lastName','$username','$password')";
+		$query = "insert into Users (firstName,lastName,username,password) values ('$firstName','$lastName','$username','$password')";
 		$conn = connectToDatabase();
     mysqli_query($con, $query);
 		header("Location: login.php");
