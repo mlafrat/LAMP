@@ -8,7 +8,7 @@ session_start();
     $lastName = $_POST['lastName'];
 		$username = $_POST['username'];
 		$password = $_POST['password'];
-		$query = "insert into Users (firstName,lastName,username,password) values ('$firstName','$lastName','$username','$password')";
+		$query = "insert into Users (firstName,lastName,userName,password) values ('$firstName','$lastName','$username','$password')";
 		$conn = connectToDatabase();
     mysqli_query($conn, $query);
 		header("Location: login.php");
@@ -54,7 +54,7 @@ session_start();
           <input type="submit" class="signUpButton" value="Register" />
         </form>
         <div class="retUserText">Existing user? Sign in below!</div>
-        <a href="index.php">
+        <a href="login.php">
           <button class="signInButton">Login</button>
         </a>
       </div>
