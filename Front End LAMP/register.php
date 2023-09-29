@@ -6,13 +6,13 @@ session_start();
 	{
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
-		$username = $_POST['username'];
+		$userName = $_POST['userName'];
 		$password = $_POST['password'];
-		$query = "insert into Users (firstName,lastName,userName,password) values ('$firstName','$lastName','$username','$password')";
+		$query = "INSERT INTO Users (firstName, lastName, userName, password) Values ('$firstName','$lastName','$userName','$password')";
 		$conn = connectToDatabase();
     mysqli_query($conn, $query);
 		header("Location: login.php");
-		die;
+    if(!$conn){die("Failed to connect to db!".mysqli_connect_error());}
 	}
 ?>
 <!DOCTYPE html>
@@ -41,15 +41,9 @@ session_start();
           <br />
           <input type="text" class="boxTwo" placeholder="Last Name" id="lastName"required />
           <br />
-          <input type="text" class="boxThree" placeholder="Username" id="username"required />
+          <input type="text" class="boxThree" placeholder="Username" id="userName"required />
           <br />
-          <input
-            type="password"
-            class="boxFour"
-            placeholder="Password"
-            id="password"
-            required
-          />
+          <input type="password" class="boxFour" placeholder="Password" id="password"required/>
           <br />
           <input type="submit" class="signUpButton" value="Register" />
         </form>
