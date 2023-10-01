@@ -41,11 +41,7 @@ if (!isset($_SESSION['user_id']))
     </div>
     <div class="containerSearch">
       <div class="searchTxt">Search Contacts</div>
-      <input
-        type="text"
-        class="searchBar"
-        placeholder="Begin typing to search..."
-      />
+      <input type="text" class="searchBar" placeholder="Begin typing to search..." />
       <input type="button" class="searchButton" value="Search" />
     </div>
     <a href="contactList.php">
