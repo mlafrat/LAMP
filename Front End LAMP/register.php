@@ -12,9 +12,14 @@ session_start();
 		$conn = connectToDatabase();
     mysqli_query($conn, $query);
 		header("Location: login.php");
-    if(!$conn){die("Failed to connect to db!".mysqli_connect_error());}
+
+    if (!$conn)
+    {
+      die("Failed to connect to db!".mysqli_connect_error());
+    }
 	}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,13 +42,13 @@ session_start();
         <div class="registerTitle">Sign Up</div>
         <div class="signUpBelow">New User? Sign up below!</div>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-          <input type="text" class="boxOne" placeholder="First Name" id="firstName"required />
+          <input type="text" class="boxOne" placeholder="First Name" name="firstName"required />
           <br />
-          <input type="text" class="boxTwo" placeholder="Last Name" id="lastName"required />
+          <input type="text" class="boxTwo" placeholder="Last Name" name="lastName"required />
           <br />
-          <input type="text" class="boxThree" placeholder="Username" id="userName"required />
+          <input type="text" class="boxThree" placeholder="Username" name="userName"required />
           <br />
-          <input type="password" class="boxFour" placeholder="Password" id="password"required/>
+          <input type="password" class="boxFour" placeholder="Password" name="password"required/>
           <br />
           <input type="submit" class="signUpButton" value="Register" />
         </form>
