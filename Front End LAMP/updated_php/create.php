@@ -1,3 +1,20 @@
+<?php
+session_start();
+  require_once('includes/functions.inc.php');
+  debug_to_console("Test");
+	if ($_SERVER["REQUEST_METHOD"] == "POST") 
+	{
+    $contactFirst = $_POST['contactFirst'];
+		$contactLast = $_POST['contactLast'];
+    $contactMail = $_POST['contactMail'];
+		$contactPhone = $_POST['contactPhone'];
+    $conn = connectToDatabase();
+    $query = "INSERT INTO ContactInfo VALUES ('$contactName', '$contactPhone', '$contactMail', '$userId')";
+    mysqli_query($conn, $query);
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,20 +36,14 @@
         <div class="frontBox"></div>
         <div class="createTitle">Create Contact</div>
         <div class="signUpBelow">Please fill all boxes below.</div>
-        <form action="placeholder.php" method="POST">
-          <input type="text" class="boxOne" placeholder="First Name" required />
+        <form action="" method="POST">
+          <input type="text" class="boxOne" placeholder="First Name" name="contactFirst" required />
           <br />
-          <input type="text" class="boxTwo" placeholder="Last Name" required />
+          <input type="text" class="boxTwo" placeholder="Last Name" name="contactLast" required />
           <br />
-          <input type="text" class="boxThree" placeholder="Email" required />
+          <input type="text" class="boxThree" placeholder="Email" name="contactMail" required />
           <br />
-          <input
-            type="tel"
-            class="boxFour"
-            placeholder="Phone: 123-456-7890"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            required
-          />
+          <input type="tel" class="boxFour" placeholder="Phone: 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="contactPhone" required />
           <br />
           <input type="submit" class="signUpButton" value="Create!" />
       </div>
