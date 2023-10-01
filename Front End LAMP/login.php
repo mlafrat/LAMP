@@ -17,7 +17,7 @@ session_start();
 			$_SESSION['user_id'] = $user['id'];
 			$_SESSION['username'] = $user['userName'];
 			// Redirect to a logged-in user page
-			header("Location: contacts.php");
+			header("Location: main.php");
 			exit();
 		} else 
 		{
@@ -46,9 +46,9 @@ session_start();
       <div class="loginTxt">Sign In</div>
       <p class="existUserText">Existing user? Sign into your account!</p>
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-        <input type="text" class="boxOne" placeholder="Username" id="username" required />
+        <input type="text" class="boxOne" placeholder="Username" name="username" required />
         <br />
-        <input type="password" class="boxTwo" placeholder="Password" id="password" required />
+        <input type="password" class="boxTwo" placeholder="Password" name="password" required />
         <br />
         <input type="submit" class="loginButton" value="Login" />
       </form>
