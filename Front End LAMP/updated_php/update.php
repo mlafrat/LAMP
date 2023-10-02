@@ -36,8 +36,8 @@
           />
           <br />
           <input type="submit" class="signUpButton" value="Update!" />
-          <a href="contacts.html">
-            <span title="Show all contacts" class="retToMain">Click here to go back to Contacts</span>
+          <a href="showContacts.php">
+            <span title="Show all contacts" class="retToMain">Click here to return to contact list!</span>
             </a>
           <div class="retUserText">Click below to delete contact.</div>
         <a href="login.html">
