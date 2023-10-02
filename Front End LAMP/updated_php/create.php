@@ -54,7 +54,7 @@ session_start();
           <br />
           <input type="submit" class="signUpButton" value="Create!" />
           <a href="showContacts.php">
-            <span title="Show all contacts" class="retToMain">Click here to go return to contact list!</span>
+            <span title="Show all contacts" class="retToMain">Click here to return to contact list!</span>
           </a>
       </div>
     </div>
