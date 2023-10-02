@@ -46,6 +46,9 @@ session_start();
           <input type="tel" class="boxFour" placeholder="Phone: 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="contactPhone" required />
           <br />
           <input type="submit" class="signUpButton" value="Create!" />
+          <a href="showContacts.php">
+            <span title="Show all contacts" class="retToMain">Click here to go return to contact list!</span>
+          </a>
       </div>
     </div>
   </body>
