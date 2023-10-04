@@ -24,25 +24,40 @@
     {
 
         case 'POST':
-            $contacts = add_contact($contactFirst,$contactLast,$contactPhone,$contactMail, $userId)
-            var_dump($contacts);
-            if (isset($contacts)) 
-            {
-                http_response_code(200);
-                echo json_encode($contacts);
-            } 
-            else 
+            if (isset(endpoint[7]))
+            {   
+                $userId = endpoint[3]
+                $contactFirst = endpoint[4]
+                $contactLast = endpoint[5]
+                $contactMail = endpoint[6]
+                $contactPhone = endpoint[7]
+
+                $contacts = add_contact($contactFirst,$contactLast,$contactPhone,$contactMail, $userId);
+                var_dump($contacts);
+
+                if (isset($contacts)) 
+                {
+                    http_response_code(200);
+                    echo json_encode($contacts);
+                } 
+                else 
+                {
+                    http_response_code(404);
+                    echo json_encode(['error' => 'Contacts of user not found']);
+                }
+
+            }
+            else:
             {
                 http_response_code(404);
-                echo json_encode(['error' => 'Contacts of user not found']);
+                echo json_encode(['error' => 'Not enough endpoints']);
             }
-            break;
         case 'GET':
             {
-                if (isset($endpoint[4])) 
+                if (isset($endpoint[3])) 
                 {
                     // Get a specific contact by ID
-                    $contactId = (int)$endpoint[4];
+                    $contactId = (int)$endpoint[3];
                     var_dump($contactId);
 
 
@@ -63,8 +78,59 @@
             }
             break;
         case 'UPDATE':
+            if (isset(endpoint[7]))
+            {   
+                $contactID = endpoint[3]
+                $contactFirst = endpoint[4]
+                $contactLast = endpoint[5]
+                $contactMail = endpoint[6]
+                $contactPhone = endpoint[7]
+
+                $contacts = update_contact($contactID, $contactFirst,$contactLast,$contactPhone,$contactMail)
+                var_dump($contacts);
+
+                if (isset($contacts)) 
+                {
+                    http_response_code(200);
+                    echo json_encode($contacts);
+                } 
+                else 
+                {
+                    http_response_code(404);
+                    echo json_encode(['error' => 'Contacts of user not found']);
+                }
+
+            }
+            else:
+            {
+                http_response_code(404);
+                echo json_encode(['error' => 'Not enough endpoints']);
+            }
             break;
         case 'DELETE':
+            if (isset(endpoint[3]))
+            {
+                $contactID = endpoint[3]
+
+                $contacts = delete_contact($contactID)
+                var_dump($contacts);
+
+                if (isset($contacts)) 
+                {
+                    http_response_code(200);
+                    echo json_encode($contacts);
+                } 
+                else 
+                {
+                    http_response_code(404);
+                    echo json_encode(['error' => 'Contacts of user not found']);
+                }
+            }
+            else:
+            {
+                http_response_code(404);
+                echo json_encode(['error' => 'Not enough endpoints']);
+            }
             break;
 
     }
