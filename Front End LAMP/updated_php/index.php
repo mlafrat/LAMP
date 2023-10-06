@@ -15,17 +15,15 @@
   </head>
   <body>
     <div class="homeTitle">Welcome to Shades of Blue Contact Manager.</div>
-    <div class="loginContainer">
-      <div class="loginBack"></div>
-      <a href="login.php">
-        <button class="loginButton">Existing Users</button>
-      </a>
-    </div>
-    <div class="regContainer">
-      <div class="regBack"></div>
-      <a href="register.php">
-        <button class="regButton">New Users</button>
-      </a>
+    <div class="usersContainer">
+        <div class="loginBack"></div>
+        <a href="login.php">
+            <button class="existUserButton">Existing Users</button>
+        </a>
+        <div class="regBack"></div>
+        <a href="register.php">
+            <button class="regButton">New Users</button>
+        </a>
     </div>
   </body>
 </html>
