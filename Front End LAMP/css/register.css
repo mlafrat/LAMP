@@ -68,9 +68,9 @@ body {
   font-size: 36px;
 }
 
-.registerTitle,.createTitle {
+.registerTitle, .createTitle {
   color: #1f72f2;
-  width: 80%;
+  width: 90%;
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
@@ -246,26 +246,31 @@ body {
   position: absolute;
 }
 
-/* ----- Create Contact Page ----- */
-.createTitle {
-  color: #1f72f2;
-  width: 80%;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: 700;
-  font-size: 100%;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+.registerLower {
+  background-color: white;
+  border-radius: 25px;
+  width: 100%;
+  height: 25%;
+  top: 75%;
   position: absolute;
+  font-size: 24px;
+}
+
+/* ----- Create Contact Page ----- */
+.createLower {
+  background-color: white;
+  border-radius: 25px;
+  width: 100%;
+  height: 5%;
+  top: 92%;
+  position: absolute;
+  font-size: 24px;
 }
 
 .retToMain {
   color: black;
   width: 90%;
-  top: 70%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   font-weight: 700;
@@ -276,7 +281,6 @@ body {
   white-space: initial;
   position: absolute;
 }
-/* ----- End Create Contact page ----- */
 
 /* ----- Mobile Displays ----- */
 @media only screen and (max-width: 600px) {
@@ -286,19 +290,22 @@ body {
 
   .frontBox {
     width: 85%;
+    height: 90%;
     min-height: 0px;
+    left: 48%;
   }
 
   .backBox {
     width: 85%;
-    top: 2%;
-    left: 56%;
+    height: 90%;
     min-height: 0px;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .upperFront {
     height: 20%;
-    top: 5%;
     font-size: 40px;
   }
 
@@ -308,14 +315,68 @@ body {
   }
 
   .midFront {
-    top: 27%;
+    height: 70%;
+  }
+
+  .boxOne {
+    top: 3%;
+    width: 80%;
+    height: 10%;
+  }
+
+  .boxTwo {
+    top: 20%;
+    width: 80%;
+    height: 10%;
+  }
+
+  .boxThree {
+    top: 37%;
+    width: 80%;
+    height: 10%;
+  }
+
+  .boxFour {
+    top: 54%;
+    width: 80%;
+    height: 10%;
+  }
+
+  .signUpButton {
+    top: 71%;
+    height: 10%;
   }
 
   .lowerFront {
     font-size: 16px;
   }
 
+  /* Lower container for Register user page */
+  .registerLower {
+    height: 15%;
+    top: 85%;
+  }
+
   .retUserText {
     width: 90%;
+    top: 10%;
+    font-size: 75%;
+  }
+
+  .signInButton {
+    width: 80%;
+    height: 40%;
+    top: 50%;
+    font-size: 120%;
+  }  
+
+  /* ----- Create Contact Page ----- */
+  .createTitle {
+    font-size: 80%;
+  }
+
+  .retToMain {
+    top: 50%;
+    font-size: 65%;
   }
 }

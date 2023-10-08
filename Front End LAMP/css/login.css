@@ -241,18 +241,24 @@ body {
   .frontBox {
     width: 85%;
     min-height: 0px;
+    left: 48%;
   }
 
   .backBox {
     width: 85%;
-    top: 2%;
-    left: 56%;
     min-height: 0px;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .upperFront {
     top: 5%;
     font-size: 40px;
+  }
+
+  .existUserText {
+    top: 55%;
   }
 
   .loginTxt {
@@ -264,16 +270,32 @@ body {
     font-size: 40px;
   }
 
+  .usernameBox {
+    width: 80%;
+  }
+
   .passwordBox {
-    top: 37%;
+    width: 80%;
+    top: 44%;
   }
 
   .loginButton {
-    top: 63%;
+    top: 79%;
+    height: 22%;
   }
 
   .lowerFront {
-    top: 63.5%;
+    height: 20%;
+    top: 80%;
     font-size: 40px;
+  }
+
+  .newUserText {
+    top: 7.5%;
+  }
+
+  .registerButton {
+    top: 40%;
+    height: 45%;
   }
 }

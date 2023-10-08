@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/mainPage.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu"/>
+    <title>Main</title>
+  </head>
+  <body>
+    <div class="mainHeader">
+      <div class="welcomeTxt">
+        Welcome Andrew Lee Test Test!
+      </div>
+      <form action="includes/logout.inc.php" method="POST">
+        <input type="submit" class="signOutBox" value="Logout" />
+      </form>
+    </div>
+    <div class="containerMain">
+      <a href="showContacts.php">
+        <span title="Show all contacts" class="showAll">
+          Click here to show all contacts
+        </span>
+      </a>
+      <a href="create.php">
+        <button class="createNewBox">Create New Contact</button>
+      </a>
+    </div>
+  </body>
+</html>

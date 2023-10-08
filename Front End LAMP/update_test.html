@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/register.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu"/>
+    <title>Update Contact</title>
+  </head>
+  <body>
+    <div class="containerWrapper">
+      <div class="container">
+        <div class="backBox"></div>
+        <div class="frontBox">
+          <div class="upperFront">
+            <div class="createTitle">
+              Update Contact
+            </div>
+            <div class="signUpBelow">
+              Please fill all boxes below.
+            </div>
+          </div>
+          <div class="midFront">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+              <input type="text" id="firstName" class="boxOne" placeholder="First Name" value="" name="contactFirst" required />
+              <br />
+              <input type="text" id="lastName" class="boxTwo" placeholder="Last Name" value="" name="contactLast" required />
+              <br />
+              <input type="text" id="emailAddress" class="boxThree" placeholder="Email" value="" name="contactMail" required />
+              <br />
+              <input type="tel" id="phoneNumer" class="boxFour" placeholder="Phone: 123-456-7890" value="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="contactPhone" required />
+              <br />
+              <br />
+              <input type="submit" class="signUpButton" value="Update!" />
+            </form>
+          </div>
+          <div class="lowerFront">
+            <a href="showContacts.php">
+              <span title="Show all contacts" class="retToMain">
+                Click here to return to contact list!
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    // Fills each box
+    var fnf = document.getElementById("firstName");
+    var lnf = document.getElementById("lastName");
+    var emf = document.getElementById("emailAddress");
+    var pnf = document.getElementById("phoneNumer");
+
+    fnf.value = "<?php echo htmlspecialchars($result['contactFirst']); ?>";
+    lnf.value = "<?php echo htmlspecialchars($result['contactLast']); ?>";
+    emf.value = "<?php echo htmlspecialchars($result['email']); ?>";
+    pnf.value = "<?php echo htmlspecialchars($result['phone']); ?>";
+  </script>
+</html>
