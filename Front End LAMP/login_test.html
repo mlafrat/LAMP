@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <title>POOSD LSP08 Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="js/code.js"></script>
+  <link rel="stylesheet" href="./css/login.css" />
+  <link rel="stylesheet" href="globals.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Ubuntu"
+  />
+</head>
+<body>
+  <div class="containerWrapper">
+    <div class="container">
+      <div class="backBox"></div>
+      <div class="frontBox">
+        <div class="upperFront">
+          <div class="loginTxt">Sign In</div>
+          <p class="existUserText">Existing user? Sign into your account!</p>
+        </div>
+        <div class="midFront">
+          <form action="" method="POST">
+            <input type="text" class="usernameBox" placeholder="Username" name="username" required />
+            <br />
+            <input type="password" class="passwordBox" placeholder="Password" name="password" required />
+            <br />
+            <input type="submit" class="loginButton" value="Login" />
+          </form>
+        </div>
+        <div class="lowerFront">
+          <div class="newUserText">New User? Register below!</div>
+          <a href="register.php">
+            <button class="registerButton">Register</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
